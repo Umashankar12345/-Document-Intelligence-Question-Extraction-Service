@@ -84,6 +84,8 @@ docker compose up --build
 - **Interactive Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **Health check**: [http://localhost:8000/health](http://localhost:8000/health)
 
+> **Docker Validation Note**: The Docker Compose configuration was fully validated via `docker compose config` (exit code 0). Live container startup was not verified on the development host due to an inactive local Windows Docker daemon. The configuration uses standard multi-stage builds (`python:3.11-slim`, `tesseract-ocr`, `postgres:16-alpine`, `redis:7-alpine`) and is expected to work on any active Docker host.
+
 > **Security Note**: For any non-demo or production deployment, set `JWT_SECRET` in `.env` to a secure, random 32+ byte key. The default fallback secret is intentionally provided only to make initial evaluation and demo runs frictionless out-of-the-box.
 
 ---
@@ -190,6 +192,7 @@ tests/test_extractor.py::test_missing_options_warning PASSED             [100%]
 3. **Handwriting Recognition**: Complex handwriting is limited by Tesseract's capabilities; the system flags low-confidence pages as `needs_review` rather than guessing.
 4. **Regex Extraction**: Heuristic regex is fast and deterministic, but complex section numbering restarts without headers can require review.
 5. **Confidence Scoring**: Heuristic linear formula tuned to conservative review thresholds.
+6. **Docker Execution**: Configuration validated with `docker compose config` (exit code 0); live container startup was not executed on the development host due to an inactive Windows Docker daemon.
 
 ---
 
