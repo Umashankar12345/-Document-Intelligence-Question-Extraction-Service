@@ -72,7 +72,7 @@ pragati-document-intelligence/
 
 ## Quickstart
 
-### Option A: Docker Compose (Recommended for Full Stack)
+### Option A: Docker Compose (Unverified locally; syntax validated)
 
 ```bash
 # 1. Copy environment variables
@@ -84,13 +84,13 @@ docker compose up --build
 - **Interactive Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **Health check**: [http://localhost:8000/health](http://localhost:8000/health)
 
-> **Docker Validation Note**: The Docker Compose configuration was fully validated via `docker compose config` (exit code 0). Live container startup was not verified on the development host due to an inactive local Windows Docker daemon. The configuration uses standard multi-stage builds (`python:3.11-slim`, `tesseract-ocr`, `postgres:16-alpine`, `redis:7-alpine`) and is expected to work on any active Docker host.
+> **Docker Validation Note**: The Docker Compose configuration was fully validated via `docker compose config` (exit code 0). Live container startup was not verified on the development host due to an inactive local Windows Docker daemon. The configuration uses standard container definitions (`python:3.11-slim` with `tesseract-ocr`, `postgres:16-alpine`, `redis:7-alpine`) and is expected to work on any active Docker host.
 
 > **Security Note**: For any non-demo or production deployment, set `JWT_SECRET` in `.env` to a secure, random 32+ byte key. The default fallback secret is intentionally provided only to make initial evaluation and demo runs frictionless out-of-the-box.
 
 ---
 
-### Option B: Local Development (Without Docker)
+### Option B: Local Development (Verified — Recommended for Evaluation)
 
 ```bash
 # 1. Install dependencies
