@@ -84,6 +84,8 @@ docker compose up --build
 - **Interactive Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **Health check**: [http://localhost:8000/health](http://localhost:8000/health)
 
+> **Security Note**: For any non-demo or production deployment, set `JWT_SECRET` in `.env` to a secure, random 32+ byte key. The default fallback secret is intentionally provided only to make initial evaluation and demo runs frictionless out-of-the-box.
+
 ---
 
 ### Option B: Local Development (Without Docker)

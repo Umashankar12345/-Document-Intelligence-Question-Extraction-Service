@@ -39,6 +39,7 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/pragati
       - REDIS_URL=redis://redis:6379/0
       - STORAGE_ROOT=/app/data/storage
+      - JWT_SECRET=${JWT_SECRET:-docker-dev-secret-please-change-in-production-32bytes}
     ports:
       - "8000:8000"
     volumes:
@@ -60,6 +61,7 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/pragati
       - REDIS_URL=redis://redis:6379/0
       - STORAGE_ROOT=/app/data/storage
+      - JWT_SECRET=${JWT_SECRET:-docker-dev-secret-please-change-in-production-32bytes}
     volumes:
       - shared_storage:/app/data/storage
     depends_on:
