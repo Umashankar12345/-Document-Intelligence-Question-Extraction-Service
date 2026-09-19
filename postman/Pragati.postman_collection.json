@@ -6,11 +6,31 @@
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
-    { "key": "base_url", "value": "http://localhost:8000", "type": "string" },
-    { "key": "bearer_token", "value": "", "type": "string" },
-    { "key": "doc_id", "value": "", "type": "string" },
-    { "key": "group_id", "value": "", "type": "string" },
-    { "key": "qid", "value": "", "type": "string" }
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "type": "string"
+    },
+    {
+      "key": "bearer_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "doc_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "group_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "qid",
+      "value": "",
+      "type": "string"
+    }
   ],
   "item": [
     {
@@ -35,12 +55,26 @@
           ],
           "request": {
             "method": "POST",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"email\": \"student@pragati.edu\",\n  \"password\": \"PragatiPass123!\",\n  \"role\": \"user\"\n}"
             },
-            "url": { "raw": "{{base_url}}/auth/register", "host": ["{{base_url}}"], "path": ["auth", "register"] }
+            "url": {
+              "raw": "{{base_url}}/auth/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
           }
         },
         {
@@ -66,15 +100,37 @@
           ],
           "request": {
             "method": "POST",
-            "header": [{ "key": "Content-Type", "value": "application/x-www-form-urlencoded" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
             "body": {
               "mode": "urlencoded",
               "urlencoded": [
-                { "key": "username", "value": "student@pragati.edu", "type": "text" },
-                { "key": "password", "value": "PragatiPass123!", "type": "text" }
+                {
+                  "key": "username",
+                  "value": "student@pragati.edu",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "PragatiPass123!",
+                  "type": "text"
+                }
               ]
             },
-            "url": { "raw": "{{base_url}}/auth/token", "host": ["{{base_url}}"], "path": ["auth", "token"] }
+            "url": {
+              "raw": "{{base_url}}/auth/token",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "token"
+              ]
+            }
           }
         },
         {
@@ -92,8 +148,22 @@
           ],
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/auth/me", "host": ["{{base_url}}"], "path": ["auth", "me"] }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/me",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "me"
+              ]
+            }
           }
         }
       ]
@@ -122,78 +192,275 @@
           ],
           "request": {
             "method": "POST",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
             "body": {
               "mode": "formdata",
               "formdata": [
-                { "key": "file", "type": "file", "src": "samples/qpaper.pdf" },
-                { "key": "role", "value": "question_paper", "type": "text" },
-                { "key": "group_id", "value": "{{group_id}}", "type": "text" }
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "samples/qpaper.pdf"
+                },
+                {
+                  "key": "role",
+                  "value": "question_paper",
+                  "type": "text"
+                },
+                {
+                  "key": "group_id",
+                  "value": "{{group_id}}",
+                  "type": "text"
+                }
               ]
             },
-            "url": { "raw": "{{base_url}}/documents", "host": ["{{base_url}}"], "path": ["documents"] }
+            "url": {
+              "raw": "{{base_url}}/documents",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents"
+              ]
+            }
           }
         },
         {
           "name": "Upload Answer Key (PDF)",
           "request": {
             "method": "POST",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
             "body": {
               "mode": "formdata",
               "formdata": [
-                { "key": "file", "type": "file", "src": "samples/answer_key.pdf" },
-                { "key": "role", "value": "answer_key", "type": "text" },
-                { "key": "group_id", "value": "{{group_id}}", "type": "text" }
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "samples/answer_key.pdf"
+                },
+                {
+                  "key": "role",
+                  "value": "answer_key",
+                  "type": "text"
+                },
+                {
+                  "key": "group_id",
+                  "value": "{{group_id}}",
+                  "type": "text"
+                }
               ]
             },
-            "url": { "raw": "{{base_url}}/documents", "host": ["{{base_url}}"], "path": ["documents"] }
+            "url": {
+              "raw": "{{base_url}}/documents",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents"
+              ]
+            }
           }
         },
         {
           "name": "List User Documents",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/documents", "host": ["{{base_url}}"], "path": ["documents"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/documents",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Returns array of documents\", () => pm.expect(pm.response.json()).to.be.an(\"array\"));"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Get Document Status",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/documents/{{doc_id}}/status", "host": ["{{base_url}}"], "path": ["documents", "{{doc_id}} any", "status"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/documents/{{doc_id}}/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents",
+                "{{doc_id}}",
+                "status"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Status is valid\", () => {",
+                  "    var j = pm.response.json();",
+                  "    pm.expect([\"pending\", \"processing\", \"completed\"]).to.include(j.status);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Get Document Metadata",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/documents/{{doc_id}}", "host": ["{{base_url}}"], "path": ["documents", "{{doc_id}}"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/documents/{{doc_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents",
+                "{{doc_id}}"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Metadata contains id and filename\", () => {",
+                  "    var j = pm.response.json();",
+                  "    pm.expect(j.id).to.be.a(\"string\");",
+                  "    pm.expect(j.filename).to.be.a(\"string\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Get Document Page Details (JSON)",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/documents/{{doc_id}}/pages/1", "host": ["{{base_url}}"], "path": ["documents", "{{doc_id}}", "pages", "1"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/documents/{{doc_id}}/pages/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents",
+                "{{doc_id}}",
+                "pages",
+                "1"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Page number is 1\", () => {",
+                  "    var j = pm.response.json();",
+                  "    pm.expect(j.page_number).to.eql(1);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Stream Rendered Page Image (PNG)",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
             "url": {
               "raw": "{{base_url}}/documents/{{doc_id}}/pages/1?as_image=true",
-              "host": ["{{base_url}}"],
-              "path": ["documents", "{{doc_id}}", "pages", "1"],
-              "query": [{ "key": "as_image", "value": "true" }]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents",
+                "{{doc_id}}",
+                "pages",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "as_image",
+                  "value": "true"
+                }
+              ]
             }
-          }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Content-Type is image/png\", () => {",
+                  "    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"image/png\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Get Extracted Questions",
@@ -214,25 +481,96 @@
           ],
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/documents/{{doc_id}}/questions", "host": ["{{base_url}}"], "path": ["documents", "{{doc_id}}", "questions"] }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/documents/{{doc_id}}/questions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents",
+                "{{doc_id}}",
+                "questions"
+              ]
+            }
           }
         },
         {
           "name": "Get Review Warnings",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/documents/{{doc_id}}/warnings", "host": ["{{base_url}}"], "path": ["documents", "{{doc_id}}", "warnings"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/documents/{{doc_id}}/warnings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents",
+                "{{doc_id}}",
+                "warnings"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Contains warnings summary\", () => {",
+                  "    var j = pm.response.json();",
+                  "    pm.expect(j).to.have.property(\"total_questions\");",
+                  "    pm.expect(j).to.have.property(\"items\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Delete Document",
           "request": {
             "method": "DELETE",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/documents/{{doc_id}}", "host": ["{{base_url}}"], "path": ["documents", "{{doc_id}}"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/documents/{{doc_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "documents",
+                "{{doc_id}}"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 204 No Content\", () => pm.response.to.have.status(204));"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         }
       ]
     },
@@ -243,17 +581,77 @@
           "name": "Get Single Question",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/questions/{{qid}}", "host": ["{{base_url}}"], "path": ["questions", "{{qid}}"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/questions/{{qid}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "questions",
+                "{{qid}}"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Returns question details\", () => {",
+                  "    var j = pm.response.json();",
+                  "    pm.expect(j.id).to.be.a(\"string\");",
+                  "    pm.expect(j.question_text).to.be.a(\"string\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Get Question Answer Info",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/questions/{{qid}}/answer", "host": ["{{base_url}}"], "path": ["questions", "{{qid}}", "answer"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/questions/{{qid}}/answer",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "questions",
+                "{{qid}}",
+                "answer"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Contains answer info\", () => {",
+                  "    var j = pm.response.json();",
+                  "    pm.expect(j).to.have.property(\"answer_source\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         }
       ]
     },
@@ -280,47 +678,135 @@
           "request": {
             "method": "POST",
             "header": [
-              { "key": "Authorization", "value": "Bearer {{bearer_token}}" },
-              { "key": "Content-Type", "value": "application/json" }
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"name\": \"Final Assessment 2026 - CS101\"\n}"
             },
-            "url": { "raw": "{{base_url}}/document-groups", "host": ["{{base_url}}"], "path": ["document-groups"] }
+            "url": {
+              "raw": "{{base_url}}/document-groups",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "document-groups"
+              ]
+            }
           }
         },
         {
           "name": "List Document Groups",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
-            "url": { "raw": "{{base_url}}/document-groups", "host": ["{{base_url}}"], "path": ["document-groups"] }
-          }
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/document-groups",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "document-groups"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Returns array of groups\", () => pm.expect(pm.response.json()).to.be.an(\"array\"));"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Attach Document to Group",
           "request": {
             "method": "POST",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
             "url": {
               "raw": "{{base_url}}/document-groups/{{group_id}}/documents/{{doc_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["document-groups", "{{group_id}}", "documents", "{{doc_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "document-groups",
+                "{{group_id}}",
+                "documents",
+                "{{doc_id}}"
+              ]
             }
-          }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         },
         {
           "name": "Get Group Merged Questions with Answers",
           "request": {
             "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{bearer_token}}" }],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}"
+              }
+            ],
             "url": {
               "raw": "{{base_url}}/document-groups/{{group_id}}/questions",
-              "host": ["{{base_url}}"],
-              "path": ["document-groups", "{{group_id}}", "questions"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "document-groups",
+                "{{group_id}}",
+                "questions"
+              ]
             }
-          }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Returns merged questions with answers\", () => {",
+                  "    var j = pm.response.json();",
+                  "    pm.expect(j).to.be.an(\"array\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         }
       ]
     },
@@ -331,8 +817,31 @@
           "name": "Service Health Check",
           "request": {
             "method": "GET",
-            "url": { "raw": "{{base_url}}/health", "host": ["{{base_url}}"], "path": ["health"] }
-          }
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status is 200 OK\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Service status is healthy\", () => {",
+                  "    var j = pm.response.json();",
+                  "    pm.expect(j.status).to.eql(\"healthy\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
         }
       ]
     }
