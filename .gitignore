@@ -5,6 +5,7 @@
 storage_data/
 pragati.db
 data/
+.env
 .env.local
 .venv/
 venv/
