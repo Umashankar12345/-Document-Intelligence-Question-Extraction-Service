@@ -4,6 +4,7 @@
 .pytest_cache/
 storage_data/
 pragati.db
+data/
 .env.local
 .venv/
 venv/
