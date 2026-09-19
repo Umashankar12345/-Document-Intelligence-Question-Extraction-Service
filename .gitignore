@@ -1,0 +1,9 @@
+﻿__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+storage_data/
+pragati.db
+.env.local
+.venv/
+venv/

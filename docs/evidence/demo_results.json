@@ -1,0 +1,106 @@
+{
+  "scenario_7_answer_key_association": {
+    "group_id": "b7957403-b173-4f47-9002-bd5f1aba63d4",
+    "question_paper_doc_id": "6db3b0a6-8bb0-4c18-8817-20de1aaaa20f",
+    "answer_key_doc_id": "ad705eb9-fbc1-4254-ab79-5b6efce4680a",
+    "linked_answers": [
+      {
+        "question_number": "1",
+        "question_text": "What is the primary function of an operating syste",
+        "answer": "B",
+        "answer_source": "external",
+        "confidence": 0.99,
+        "status": "ok"
+      },
+      {
+        "question_number": "2",
+        "question_text": "Which data structure operates on a Last-In, First-",
+        "answer": "C",
+        "answer_source": "external",
+        "confidence": 0.99,
+        "status": "ok"
+      },
+      {
+        "question_number": "3",
+        "question_text": "What is the asymptotic time complexity of searchin",
+        "answer": "B",
+        "answer_source": "external",
+        "confidence": 0.99,
+        "status": "ok"
+      },
+      {
+        "question_number": "4",
+        "question_text": "Explain the key distinctions between a process and",
+        "answer": "Process has its own addre",
+        "answer_source": "external",
+        "confidence": 0.97,
+        "status": "ok"
+      },
+      {
+        "question_number": "5",
+        "question_text": "Describe the role of page tables and TLB in virtua",
+        "answer": "Page faults occur when vi",
+        "answer_source": "external",
+        "confidence": 0.97,
+        "status": "ok"
+      }
+    ]
+  },
+  "scenario_5_cross_page_stitching": {
+    "cross_page_doc_id": "2531d5a6-f588-47ca-88d4-8a476ff09789",
+    "questions": [
+      {
+        "question_number": "1",
+        "source_pages": [
+          1
+        ],
+        "warnings": []
+      },
+      {
+        "question_number": "2",
+        "source_pages": [
+          1
+        ],
+        "warnings": []
+      },
+      {
+        "question_number": "3",
+        "source_pages": [
+          1,
+          2
+        ],
+        "warnings": [
+          "split_across_pages"
+        ]
+      },
+      {
+        "question_number": "4",
+        "source_pages": [
+          2
+        ],
+        "warnings": []
+      }
+    ]
+  },
+  "scenario_3_and_8_blurry_scan": {
+    "blurry_doc_id": "50c36ac6-5fc3-4af5-8021-91d9290ad8b2",
+    "warnings_summary": {
+      "document_id": "50c36ac6-5fc3-4af5-8021-91d9290ad8b2",
+      "total_questions": 1,
+      "needs_review_count": 1,
+      "partial_count": 0,
+      "items": [
+        {
+          "question_id": "9c6f26b3-80e1-4c2e-921f-9c8b19000ef7",
+          "question_number": "1",
+          "status": "needs_review",
+          "confidence": 0.28,
+          "warnings": [
+            "low_ocr"
+          ],
+          "snippet": "W??t is the c?pit?l of F??nce?"
+        }
+      ]
+    }
+  }
+}
