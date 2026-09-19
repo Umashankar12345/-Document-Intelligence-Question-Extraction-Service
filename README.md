@@ -121,15 +121,16 @@ tests/test_api.py::test_file_upload_validations PASSED                   [ 35%]
 tests/test_api.py::test_end_to_end_question_paper_extraction PASSED      [ 41%]
 tests/test_api.py::test_cross_page_extraction_e2e PASSED                 [ 47%]
 tests/test_api.py::test_group_linking_with_answer_key PASSED             [ 52%]
-tests/test_api.py::test_authorization_and_security PASSED                [ 58%]
-tests/test_confidence.py::test_confidence_ok_status PASSED               [ 64%]
-tests/test_confidence.py::test_confidence_partial_status PASSED          [ 70%]
-tests/test_confidence.py::test_confidence_needs_review_when_critical_warning PASSED [ 76%]
-tests/test_confidence.py::test_confidence_needs_review_when_low_score PASSED [ 82%]
+tests/test_api.py::test_authorization_and_security PASSED                [ 55%]
+tests/test_api.py::test_low_confidence_scan_produces_needs_review PASSED [ 61%]
+tests/test_confidence.py::test_confidence_ok_status PASSED               [ 66%]
+tests/test_confidence.py::test_confidence_partial_status PASSED          [ 72%]
+tests/test_confidence.py::test_confidence_needs_review_when_critical_warning PASSED [ 77%]
+tests/test_confidence.py::test_confidence_needs_review_when_low_score PASSED [ 83%]
 tests/test_extractor.py::test_basic_question_and_options_extraction PASSED [ 88%]
 tests/test_extractor.py::test_cross_page_question_stitching PASSED       [ 94%]
 tests/test_extractor.py::test_missing_options_warning PASSED             [100%]
-======================= 17 passed in 3.48s =======================
+======================= 18 passed in 3.98s =======================
 ```
 
 ---
